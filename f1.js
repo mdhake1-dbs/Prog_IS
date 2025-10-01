@@ -11,6 +11,7 @@ let check=()=>{
                 removalwt = initialwt - 15;
                 alert('Baggage is overwight weight by: '+ removalwt);
                 document.getElementById('removed').value = removalwt;
+                remove();
                 
               }
               else {
