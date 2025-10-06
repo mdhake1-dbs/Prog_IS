@@ -11,11 +11,11 @@ let euler1=()=> {
     alert("The sum of numbers upto 10 divisible by 3 or 5 is "+sum);
 }
 
-let eulerCustom=()=>{
+let eulerCustom=(str1,str2,str3)=>{
     
-    let d1 = parseInt(document.getElementById('a').value);
-    let d2 = parseInt(document.getElementById('b').value);
-    let n = parseInt(document.getElementById('n').value);
+    let d1 = intinp(str1);
+    let d2 = intinp(str2);
+    let n = intinp(str3);
     let sum = 0;
     for (let i = 1; i < n; i++) {
         
