@@ -30,8 +30,6 @@ let eulerList2 = (str1, str2) => {
         }
     }
 
-    let divisors = [m1, m2, m3];
-
     //Logic - 2
     /*
     sum = myar1.reduce((acc, val) => {
