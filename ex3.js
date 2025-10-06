@@ -22,8 +22,6 @@ let eulerList2 = (str1, str2) => {
     let numlist = intarrinp(str2);
 
     let sum = 0;
-    alert("Divisors found = "+divarr);
-    alert("List found = "+numlist);
     
     //Logic - 1
     for (let i = 0; i < numlist.length; i++) {

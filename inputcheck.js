@@ -1,28 +1,36 @@
-let intinp=(strid)=>{
+let intinp = (strid) => {
 
-    validateInput(strid);
-    return parseInt(document.getElementById(strid).value);
+  validateInput(strid);
+  return parseInt(document.getElementById(strid).value);
 }
 
-let strinp=(strid)=>{
+let strinp = (strid) => {
 
-    validateInput(strid);
-    return document.getElementById(strid).value;
+  validateInput(strid);
+  return document.getElementById(strid).value;
 }
 
-let intarrinp=(strid)=>{
+let intarrinp = (strid) => {
 
-    validateInput(strid);
-    return document.getElementById(strid).value.split(" ").map((x=>parseInt(x)));
+  validateInput(strid);
+  return document.getElementById(strid).value.split(" ").map((x => parseInt(x)));
 }
 
-let strarrinp=(strid)=>{
+let strarrinp = (strid) => {
 
-    validateInput(strid);
-    return document.getElementById(strid).value.split(" ");
+  validateInput(strid);
+  return document.getElementById(strid).value.split(" ");
 }
 
-let validateInput=(strid)=>{
+let strdarrinpvalue = (strid) => {
+
+  validateInput(strid);
+
+  return document.getElementById(strid).value.split(":").map(row => row.trim().split(" ").map(Number));
+
+}
+
+let validateInput = (strid) => {
 
   const input = document.getElementById(strid).value.trim();
 
