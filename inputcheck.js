@@ -29,6 +29,33 @@ let strdarrinpvalue = (strid) => {
   return document.getElementById(strid).value.split(":").map(row => row.trim().split(" ").map(Number));
 
 }
+/*
+let strdarrinpvaluesafe = (strid) => {
+  try {
+    
+    validateInput(strid);
+
+    let result = document.getElementById(strid).value.split(":").map(row => {
+
+        let numbers = row.trim().split(" ").map(numStr => {
+          let n = Number(numStr);
+          if (Number.isNaN(n) || !Number.isInteger(n)) {
+            throw new Error(`Invalid integer value: "${numStr}"`);
+          }
+          return n;
+        });
+        return numbers;
+      });
+
+    return result;
+
+  } catch (error) {
+    
+    console.error("Error parsing input:", error.message);
+    return []; // or rethrow / return null depending on your use case
+  }
+};
+*/
 
 let validateInput = (strid) => {
 

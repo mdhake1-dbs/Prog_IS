@@ -9,7 +9,7 @@ let calSum = (str1, str2) => {
     
     for (let i = 0; i < numlist.length; i++) {
 
-        if (divarr.some(d => numlist[i] % d === 0)) {
+        if (divarr.some(d => d !== 0 && numlist[i] % d === 0)) {
 
             sum += numlist[i];
         }
