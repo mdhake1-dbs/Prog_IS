@@ -22,13 +22,35 @@ let strarrinp = (strid) => {
   return document.getElementById(strid).value.split(" ");
 }
 
-let strdarrinpvalue = (strid) => {
+let strdarrinpvalue = (id) => {
 
-  validateInput(strid);
+    const inputString = document.getElementById(id).value;
+    const parts = inputString.split(":");
 
-  return document.getElementById(strid).value.split(":").map(row => row.trim().split(" ").map(Number));
+    if (parts.length !== 2) {
+      
+        throw new Error("Input must be in the format 'Factors : Number List'");
+    }
 
+    const divarr = parts[0].split(" ").filter(s => s.trim() !== "").map(Number);
+    const numlist = parts[1].split(" ").filter(s => s.trim() !== "").map(Number);
+
+    if (divarr.some(isNaN) || numlist.some(isNaN)) {
+
+        throw new Error("All factors and numbers must be valid integers.");
+    }
+
+    return [divarr, numlist];
 }
+
+
+// let strdarrinpvalue = (strid) => {
+
+//   validateInput(strid);
+
+//   return document.getElementById(strid).value.split(":").map(row => row.trim().split(" ").map(Number));
+
+// }
 /*
 let strdarrinpvaluesafe = (strid) => {
   try {
