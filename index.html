@@ -10,10 +10,12 @@
     <script src="ex3.js"> </script>
     <script src="ex4.js"> </script>
     <script src="ex5.js"> </script>
-    
+    <script src="ex6.js"> </script>
+
 </head>
 
 <body>
+    
     <input type="text" id="weight">
     <!--//replace button onclick with call to check function.-->
     <button onclick="checkbag('weight','removed','remB')">Check Baggage</button>
@@ -95,8 +97,46 @@
     </p>
     <p><button onclick="safecalSum('safeinpstrarr','saferesultsum')"> Calculate Sum With Error Handling</button>
     </p>
+    
+    Element with ID "demo"
+    <br>
+    <p id="demo"> Test </p>
 
+    <br>
 
+    Property for Element ID "demo" = <input type="text" id="t1">
+    <button onclick="func1('t1','demo')">Check Property Value </button>
+    <br>
+    <br>
+    Click to Update Property to "Hello World!"
+    <br>
+    <button onclick="func2('demo')">Update </button>
+    <br>
+    <br>
+    Click to Create DOM Element
+    <br>
+    <button onclick="func3('mydiv1','btn2')" id='btn2'> Create </button>
+    <br>
+    <br>
+    Click to Style the new DOM Element
+    <br>
+    <button onclick="func4('mydiv1')"> Style Element </button>
+
+    <br>
+    <br>
+    Click to Create 2nd DOM Element
+    <br>
+    <button onclick="func3('mydiv2','btn3')" id='btn3'> Create </button>
+    <br>
+    <br>
+    Click to Style the new DOM Element
+    <br>
+    <button onclick="func4('mydiv2')"> Style Element </button>
+    <br>
+    <br>
+    Click to Create Child for 2nd DOM Element
+    <br>
+    <button onclick="func6('mydiv2')" id='btn4'> Create Child Element </button>
 
 </body>
 
